@@ -28,7 +28,7 @@
             background-clip: padding-box;
             border-radius: 7px;
             width: 300px;
-            height: 150px;
+            height: auto;
             padding: 10px;
             display: flex;
             justify-content: center;
@@ -80,7 +80,7 @@
          }
 
          .y {
-            top: 44.35%;
+            top: 43.65%;
             left: 56.3%;
             position: absolute;
             color: rgb(35, 35, 35);
@@ -91,6 +91,36 @@
          }
 
          .y:hover {
+            color: rgb(155, 155, 155);
+         }
+
+         .y1 {
+            top: 48.95%;
+            left: 56.3%;
+            position: absolute;
+            color: rgb(35, 35, 35);
+            background-color: white;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 15px;
+         }
+
+         .y1:hover {
+            color: rgb(155, 155, 155);
+         }
+
+         .y2 {
+            top: 54.5%;
+            left: 56.3%;
+            position: absolute;
+            color: rgb(35, 35, 35);
+            background-color: white;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 15px;
+         }
+
+         .y2:hover {
             color: rgb(155, 155, 155);
          }
 
@@ -105,6 +135,14 @@
          <div>
             <p id="yordiCoords">x = 330.25, y = 225.12, z = 15.3</p>
             <i class="y fas fa-copy" onclick="yordiCopy()"></i>
+         </div>
+         <div>
+            <p id="yordinormalCoords">330.25, 225.12, 15.3</p>
+            <i class="y1 fas fa-copy" onclick="yordinormalCopy()"></i>
+         </div>
+         <div>
+            <p id="yordivector3Coords">vector3(330.25, 225.12, 15.3)</p>
+            <i class="y2 fas fa-copy" onclick="yordivector3Copy()"></i>
          </div>
          <button onclick="yordiClose()">Kapat</button>
       </div>

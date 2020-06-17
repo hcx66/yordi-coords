@@ -6,11 +6,27 @@ RegisterCommand("kordinat", function()
     local y = string.sub(playerCoords.y, 0, 8)
     local z = string.sub(playerCoords.z, 0, 6)
     yordiCoords('yordi', 'x = ' .. x .. ', y = ' .. y .. ', z = ' .. z)
+    yordicoordsNormal('normal', x .. ', ' .. y .. ', ' .. z)
+    yordicoordsVector3('vector3', 'vector3(' .. x .. ', ' .. y .. ', ' .. z .. ')')
     SetDisplay(not display)
 end)
 
 function yordiCoords(type, text)
 	SendNUIMessage({
+        type = type,
+		text = text
+	})
+end
+
+function yordicoordsNormal(type, text)
+    SendNUIMessage({
+        type = type,
+		text = text
+	})
+end
+
+function yordicoordsVector3(type, text)
+    SendNUIMessage({
         type = type,
 		text = text
 	})

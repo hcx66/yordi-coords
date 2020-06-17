@@ -24,6 +24,8 @@ window.addEventListener('message', function(event) {
         }
 
         yordiCoords(event.data);
+        yordinormalCoords(event.data);
+        yordinvector3Coords(event.data);
 
     })
 })
@@ -41,6 +43,24 @@ function yordiCopy(){
     document.execCommand("copy");
 }
 
+function yordinormalCopy(){
+    const copyText = document.getElementById("yordinormalCoords").textContent;
+    const textArea = document.createElement('textarea');
+    textArea.textContent = copyText;
+    document.body.append(textArea);
+    textArea.select();
+    document.execCommand("copy");
+}
+
+function yordivector3Copy(){
+    const copyText = document.getElementById("yordivector3Coords").textContent;
+    const textArea = document.createElement('textarea');
+    textArea.textContent = copyText;
+    document.body.append(textArea);
+    textArea.select();
+    document.execCommand("copy");
+}
+
 function yordiCoords(data) {
 
 	if (data.type === 'yordi') {
@@ -49,6 +69,30 @@ function yordiCoords(data) {
 
 }
 
+function yordinormalCoords(data) {
+
+	if (data.type === 'normal') {
+        yordicoordsnormalStart(data);
+    }
+
+}
+
+function yordinvector3Coords(data) {
+
+	if (data.type === 'vector3') {
+        yordicoordsvector3Start(data);
+    }
+
+}
+
 function yordicoordsStart(data){
     document.querySelector("#yordiCoords").textContent = data.text;
+}
+
+function yordicoordsnormalStart(data){
+    document.querySelector("#yordinormalCoords").textContent = data.text;
+}
+
+function yordicoordsvector3Start(data){
+    document.querySelector("#yordivector3Coords").textContent = data.text;
 }
