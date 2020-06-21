@@ -2,7 +2,7 @@
 Benim tarafımdan geliştirilmiş olan __Yordi Lester Job__ scriptini dilediğiniz gibi kullanıp, geliştirmeler yapabilirsiniz. Diğer yapmış olduğum scriptlere veya düzenlemiş olduğum scriptlere bakmak için [Websitemi](https://yordi.online) ziyaret edin.
 
 ## Yordi Lester Job
-- Kolay bir şekilde kordinatı kopyalayıp, istediğiniz gibi kullanabilirsiniz.
+- Kolay bir şekilde eşya teslimatı yapılan bir sistem.
 
 ## Yordi Lester Job - Kurulum
 - İndirmiş olduğunuz __yordi-lesterjob__ scriptini __resources__ içersine girip atın.
